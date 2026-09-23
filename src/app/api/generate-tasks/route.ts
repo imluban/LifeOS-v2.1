@@ -2,6 +2,7 @@ import Groq from "groq-sdk";
 
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { getAuthenticatedUser } from "@/lib/auth-server";
+import { GROQ_MODEL } from "@/lib/ai-config";
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
@@ -29,7 +30,7 @@ export async function POST(req: Request) {
     }
 
     const completion = await groq.chat.completions.create({
-      model: "llama-3.3-70b-versatile",
+      model: GROQ_MODEL,
       messages: [
         {
           role: "system",
