@@ -6,6 +6,7 @@ import Sidebar from "./sidebar";
 import Topbar from "./topbar";
 
 import SettingsModal from "@/components/settings/settings-modal";
+import InstallPrompt from "./install-prompt";
 
 import { useSettingsStore } from "@/store/settings-store";
 
@@ -46,6 +47,8 @@ export default function DashboardLayout({
         open={open}
         onClose={closeSettings}
       />
+
+      <InstallPrompt />
 
     </div>
   );
