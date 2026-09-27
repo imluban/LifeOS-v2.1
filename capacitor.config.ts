@@ -10,7 +10,7 @@ const config: CapacitorConfig = {
   // auth), the native app shell just loads your real, always-up-to-date
   // Vercel deployment. Replace this with your actual Vercel URL.
   server: {
-    url: "https://YOUR-APP-NAME.vercel.app",
+    url: "https://lifeos-laxon.vercel.app",
     cleartext: false,
     androidScheme: "https",
   },
